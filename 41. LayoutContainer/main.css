@@ -1,0 +1,21 @@
+.main {
+    color: #5D5349;
+    width: 400px;
+    height: 300px;
+}
+
+.main .top {
+    background-color: #FFF7DB;
+}
+
+.main .center {
+    background-color: #fff;
+}
+
+.main .right {
+    background-color: #D0B9A2;
+}
+
+h1 {
+    margin-top: 0.1em;
+}

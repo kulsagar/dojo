@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>43. ContentPane</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+        appConfig={baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig={parseOnLoad: true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+                    packages:[
+                        {
+                            name:'app',
+                            location:appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]);
+    </script>
+</head>
+<body class="claro">
+<div id='pane' data-dojo-type="dijit/layout/ContentPane"
+     data-dojo-props="loadingMessage: 'Please wait ...'"
+     style="height: 200px; width: 300px">
+    <h1>Initial Content</h1>
+    <p>Initial Content</p>
+</div>
+<button id='btn' data-dojo-type="dijit/form/Button">Click to Change Content</button>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>08. Ajax Form Validation</title>
+<link rel="stylesheet" href="../app/dijit/themes/claro/claro.css"/>
+<script type="text/javascript">
+
+	appConfig ={
+		baseUrl: location.href.substring(0,location.href.lastIndexOf("/")+1)
+			};
+
+	dojoConfig={
+				parseOnLoad: true
+			};
+</script>
+
+<script type="text/javascript" src = "../app/dojo/dojo.js"></script>
+<script type="text/javascript">
+
+	require(
+			{
+				packages: [
+		        	   {name:'app', location: appConfig.baseUrl}
+			   	]
+		},
+		[
+			"app"
+		]
+		
+		);
+</script>
+</head>
+<body  class="claro">
+	<div data-dojo-type="dijit/form/Form" encType="multipart/form-data" action="" method="post">
+		<div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:1">
+			<div data-dojo-type="AjaxValidationTextBox" data-dojo-props="ajaxUrl:'validateUser.jsp', invalidMessage:'User name is already taken'" title="Username:" name="username" value=""></div>
+            <!--<div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="ajaxUrl:'validateUser.jsp', invalidMessage:'User name is already taken'" title="Username:" name="username" value=""></div>-->
+		</div>
+		<button id="btnSubmit" data-dojo-type="dijit/form/Button" type="button" role="button">Submit</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<h1>Form</h1>
+<div id="{{formId}}" data-dojo-type="dijit/form/Form" enctype="multipart/form-data" action={{postUrl}} method="POST">
+	<div data-dojo-type="dojox/layout/TableContainer" data-dojoprops="cols:1">
+		<div data-dojo-type="dijit/form/TextBox" title="First Name :: " name="firstName" value="{{entity.firstName}}"></div>
+		<div data-dojo-type="dijit/form/TextBox" title="Last Name :: " name="lastName" value="{{entity.lastName}}"></div>
+		<div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="validator:dojox.validate.isEmailAddress, invalidMessage:'Invalid email address'" title="Email Address ::", name="email" value="{{entity.email}}"></div>
+	</div>
+	<div><h1>{{entity.firstName}}</h1></div>
+	<button id="bSubmit" data-dojo-type="dijit/form/Button" type="button" role="button">Submit</button>
+</div>
+<hr/>
+<h1>Server Response</h1>
+<div id="{{formId}}Response"  data-dojo-type="dijit/layout/ContentPane"></div>

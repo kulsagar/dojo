@@ -1,0 +1,15 @@
+@import "../app/dgrid/css/skins/claro.css";
+
+#example {
+    height: 15em;
+}
+
+.dgrid .positive {
+    background-color: #cfc;
+    color: #030;
+}
+
+.dgrid .negative {
+    background-color: #fcc;
+    color: #300;
+}

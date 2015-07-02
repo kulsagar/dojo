@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>21. dojo/parser</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css" />
+    <script type="text/javascript">
+        appConfig={baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoconfig={parseOnLoad:true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+                    packages: [
+                        {
+                            name:'app',
+                            location: appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]
+        );
+    </script>
+</head>
+<body>
+<div id="progressBar" style="width: 400px;"
+     data-dojo-type="dijit/ProgressBar"
+     data-dojo-props="maximum: 200, value: 30">
+     </div>
+</body>
+</html>

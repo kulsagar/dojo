@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>40. Accordian Container</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css">
+    <script type="text/javascript">
+        appConfig= {baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig ={parseOnLoad:true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+                    packages:[
+                        {
+                            name:'app',
+                            location:appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]);
+    </script>
+</head>
+<body class="claro">
+
+    <div data-dojo-type="dijit/layout/AccordionContainer"
+         style="height: 200px;">
+        <div data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="title: 'Page 1'">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet ac libero et tincidunt. Quisque et diam rutrum, varius nulla id, egestas risus. Fusce tortor diam, venenatis in suscipit sit amet, malesuada id nunc. Aliquam fringilla velit sed mattis aliquet. Nullam vel mauris nec augue pharetra laoreet. Integer lorem lacus, dignissim ac imperdiet sit amet, vestibulum at tortor. Nulla molestie ligula nec quam iaculis, a consectetur nisl ultricies. Nam pellentesque imperdiet ultricies. In placerat justo ut gravida ornare.
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="title: 'Page 2'">
+            In sagittis porta lorem ut malesuada. Donec consequat nisl ligula. Quisque ut quam odio. Donec auctor neque sed dolor pretium convallis. Nam nec urna quis magna commodo suscipit. Ut aliquam, erat eu bibendum laoreet, massa urna bibendum sem, ac vulputate est urna sit amet ligula. Nam dignissim condimentum nunc eu accumsan. Fusce non accumsan nunc, a blandit augue. Nulla tristique enim ut dui egestas sollicitudin. Curabitur dolor augue, rhoncus consectetur diam sed, varius volutpat augue. Integer ut tellus fermentum ante mattis pulvinar. Ut porta magna ut ligula consequat, at facilisis sem placerat. Vestibulum sed iaculis libero. Mauris pharetra augue ut dui feugiat tincidunt.
+        </div>
+    </div>
+
+</body>
+</html>

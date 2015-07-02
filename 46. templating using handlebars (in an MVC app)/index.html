@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>46. Templating using handlebars (in MVC app) </title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css"/>
+    <link rel="stylesheet" href="main.css"/>
+    <script type="text/javascript">
+
+        appConfig ={
+            baseUrl: location.href.substring(0,location.href.lastIndexOf("/")+1)
+        };
+
+        dojoConfig={
+            parseOnLoad: true
+        };
+        console.log(appConfig.baseUrl);
+    </script>
+
+    <script type="text/javascript" src = "../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+
+        require(
+                {
+                    packages: [
+                        {name:'app', location: appConfig.baseUrl},
+                        {
+                            name: 'Handlebars',
+                            /*location :appConfig.baseUrl+'/lib/',*/
+                            location: 'http://cdn.devgrid.net/ajax/handlebars/1.0.0',
+                            main: 'handlebars'
+                        }
+                    ]
+                },
+                [
+                    "app"
+                ]
+
+        );
+    </script>
+</head>
+<body  class="claro">
+<div data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="gutters:true, liveSplitters:true" style="width: 100%; height:100%;">
+    <div id="contentPane"  data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'center'">
+    </div>
+</div>
+</body>
+</html>

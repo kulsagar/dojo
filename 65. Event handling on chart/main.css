@@ -1,0 +1,15 @@
+@import "../app/dojo/resources/dojo.css";
+@import "../app/dijit/themes/claro/claro.css";
+#chart {
+    width: 400px;
+    height: 280px;
+    margin: 15px;
+}
+#details {
+    margin:50px 15px;
+    border:1px solid #000;
+    height:85px;
+    width:105px;
+    padding:10px;
+    background-color:#eee;
+}

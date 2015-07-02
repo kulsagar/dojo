@@ -1,0 +1,4 @@
+@import "../app/dgrid/css/skins/claro.css";
+#scientists, #example {
+    height: 10em;
+}

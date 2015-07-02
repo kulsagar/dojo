@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>01. Lang Utilities</title>
+    <script type="text/javascript">
+
+        appConfig ={
+            baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)
+        };
+
+        dojoConfig={
+            parseOnLoad: true
+        };
+
+        var foo = {
+            bar: "test Value"
+        };
+
+    </script>
+
+    <script type="text/javascript" src = "../app/dojo/dojo.js"></script>
+
+    <script type="text/javascript">
+        console.log(appConfig.baseUrl);
+        require(
+        {
+        packages:[
+        {name:'app', location:appConfig.baseUrl}
+        ]
+        },
+        ["app"]);
+    </script>
+
+</head>
+<body>
+</body>
+</html>

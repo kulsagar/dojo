@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>42. BorderContainer</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+        appConfig = {baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig = {parseOnLoad:true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+                    packages :[
+                        {
+                            name:'app',
+                            location:appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]);
+    </script>
+</head>
+<body class="claro">
+    <div data-dojo-type="dijit/layout/BorderContainer"
+         data-dojo-props="design: 'sidebar', liveSplitters: true"
+         class="main">
+        <div data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region :'top', splitter: true" class='top' >
+            <h1>Header</h1>
+             </div>
+        <div data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region :'center'" class="center">
+            <h1>Main Content</h1>
+            <p>
+                Mauris gravida imperdiet congue. Praesent fermentum facilisis augue at
+                aliquam. Vivamus tristique felis tellus, vitae lobortis augue euismod id.
+                Phasellus sed sollicitudin leo. Maecenas ut ante ligula.
+                Cras elementum cursus quam eu facilisis. Suspendisse a odio a mauris
+                auctor tincidunt vitae sed ligula. Mauris quis dolor ut eros auctor
+                varius eu et orci. In hendrerit augue a nibh fringilla condimentum.
+                Etiam dapibus venenatis nunc non rhoncus. Aliquam vehicula est quis
+                libero luctus, a tristique tortor ultricies. In laoreet lacus sit amet
+                leo vehicula dapibus. Donec sed purus magna. Suspendisse vel ante sodales
+                arcu consectetur bibendum sit amet in felis. Praesent molestie interdum
+                sapien, in suscipit orci sollicitudin rhoncus. Etiam quis ipsum in arcu
+                convallis hendrerit quis id lorem. </p>
+        </div>
+        <div data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region: 'right', splitter: true" class="right">
+            <h1>Sidebar</h1>
+             </div>
+         </div>
+</body>
+</html>

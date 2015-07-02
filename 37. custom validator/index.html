@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>37. custom validator</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css">
+    <script type="text/javascript">
+        appConfig = {baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig ={parseOnLoad : true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js">
+    </script>
+    <script type="text/javascript">
+        require({
+                    packages: [
+                        {
+                            name :'app',
+                            location : appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]);
+    </script>
+</head>
+<body class="claro">
+<div data-dojo-type="dijit/form/Form" enctype="multipart/form-data"
+     method="POST" action="">
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:1">
+        <div data-dojo-type="dijit/form/ValidationTextBox"
+             data-dojo-props="validator:dojox.validate.isOver555"
+             title="Custom Validation"></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+	{"shop": "Boston", "sales": 8300, "employees": 3, "manager": "Wendell Joy"},
+	{"shop": "Atlanta", "sales": 1180, "employees": 1, "manager": "Michael Lucas"},
+	{"shop": "San Diego", "sales": 9800, "employees": 4, "manager": "Ben Lazar"},
+	{"shop": "Phoenix", "sales": 1780, "employees": 2, "manager": "Susan Leary"},
+	{"shop": "Dallas", "sales": 10400, "employees": 5, "manager": "Alice Curtis"},
+	{"shop": "Minneapolis", "sales": 7111, "employees": 3, "manager": "Dorothy Salem"}
+]

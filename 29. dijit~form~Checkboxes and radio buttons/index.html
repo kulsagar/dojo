@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>29. dijit~form~Checkboxes and radio buttons</title>
+    <link rel='stylesheet' href="../app/dijit/themes/claro/claro.css">
+    <script type="text/javascript">
+        appConfig = {baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig = {parseOnLoad : true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+                    packages: [
+                        {
+                            name: 'app',
+                            location : appConfig.baseUrl
+                        }
+                    ]
+                },
+                [
+                    'app'
+                ]);
+    </script>
+</head>
+<body class="claro">
+     <div id="checkBoxRadioButtonForm" data-dojo-type="dijit/form/Form"
+          enctype="multipart/form-data" action="" method="POST">
+         <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:1">
+             <div data-dojo-type="dijit/form/CheckBox" title="CheckBox" name="CheckBox"></div>
+             <div data-dojo-type="dijit/form/RadioButton"
+                  title="RadioButton" name="RadioButton" value="XXX"></div>
+             <div data-dojo-type="dijit/form/RadioButton"
+                  title="RadioButton" name="RadioButton" value="YYY"></div>
+             <div data-dojo-type="dijit/form/RadioButton"
+                  title="RadioButton" name="RadioButton" value="ZZZ"></div>
+         </div>
+         <button id="btnSubmit" data-dojo-type="dijit/form/Button" type="button"
+                 role="button">Submit</button>
+          </div>
+</body>
+</html>

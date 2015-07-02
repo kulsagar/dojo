@@ -1,0 +1,11 @@
+@import "../app/dgrid/css/skins/claro.css";
+
+#filterbox {
+    width: 15em;
+}
+#grid {
+    height: 15em;
+}
+#grid .field-id {
+    width: 20%;
+}

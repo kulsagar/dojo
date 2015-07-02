@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>06. Dojo dijit FORM</title>
+<link rel="stylesheet" href="../app/dijit/themes/claro/claro.css"/>
+<script type="text/javascript">
+
+	appConfig ={
+		baseUrl: location.href.substring(0,location.href.lastIndexOf("/")+1)
+			};
+
+	dojoConfig={
+				parseOnLoad: true
+			};
+</script>
+
+<script type="text/javascript" src = "../app/dojo/dojo.js"></script>
+<script type="text/javascript">
+
+	require(
+			{
+				packages: [
+		        	   {name:'app', location: appConfig.baseUrl}
+			   	]
+		},
+		[
+			"app"
+		]
+		
+		);
+</script>
+</head>
+<body  class="claro">
+ 
+<div id='textBoxForm' data-dojo-type="dijit/form/Form" enctype="multipart/form-data" action="" method="POST">
+    <div data-dojo-type="dojox/layout/TableContainer" data-dojo-props="cols:1">
+        <div id="textBox" data-dojo-type="dijit/form/TextBox" title="TextBox:" name="text_box" value="Some text"></div>
+        <div data-dojo-type="dijit/form/CurrencyTextBox" data-dojo-props="currency:'USD', invalidMessage:'Invalid value'" title="CurrencyTextBox:" name="currency_text_box" value="666.99"></div>
+        <div data-dojo-type="dijit/form/DateTextBox" title="DateTextBox:" name="date_text_box" value="2013-06-22"></div>
+        <div data-dojo-type="dijit/form/NumberTextBox" title="NumberTextBox:" name="number_text_box" value="123"></div>
+        <div data-dojo-type="dijit/form/TimeTextBox" title="TimeTextBox:" name="time_text_box" value="T11:12:13"></div>
+        <div data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="regExp:'^[a-zA-Z]+$', invalidMessage:'Invalid value'" title="ValidationTextBox:" name="validation_text_box" value="CharactersOnly"></div>
+        <div data-dojo-type="dijit/form/Textarea" title="Textarea:" name="textarea" value="Some text in Textarea"></div>
+</div>
+    <button id="btnSubmit" data-dojo-type="dijit/form/Button" type="button" role="button">Submit</button>
+</div>
+</body>
+</html>

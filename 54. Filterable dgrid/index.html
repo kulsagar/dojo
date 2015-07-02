@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>54. Filterable dgrid</title>
+    <link rel="stylesheet" href="../app/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript">
+        appConfig = {baseUrl:location.href.substring(0,location.href.lastIndexOf("/")+1)};
+        dojoConfig = {parseOnLoad : true};
+    </script>
+    <script type="text/javascript" src="../app/dojo/dojo.js"></script>
+    <script type="text/javascript">
+        require({
+            packages : [
+                {
+                    name : 'app',
+                    location : appConfig.baseUrl
+                }
+            ]
+        },[
+            'app'
+        ]);
+    </script>
+</head>
+<body class="claro">
+<div>
+    <form id="filterform">
+        <input id="filterbox">
+        <input type="submit" value="Filter">
+    </form>
+</div>
+<div id="grid"></div>
+</body>
+</html>
